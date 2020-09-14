@@ -1,0 +1,55 @@
+/* Google Fonts */
+
+/* Select by tag */
+h1 {
+    color:red;
+    background-color: blue;
+    font-family: Ranchers, sans-serif, serif;
+}
+
+/* select by id, only one */
+#mainPar {
+    color: yellow;
+}
+
+#box1 {
+    background-color: yellow;
+    width: 200px;
+    height: 100px;
+    padding: 20px;
+}
+
+#box2 {
+    background-color: yellow;
+    width: 200px;
+    height: 100px;
+    padding: 20px;
+}
+
+/* class id */
+.veggies {
+    color: green;
+}
+
+.meat {
+    color: red;
+}
+
+#font {
+    font-size: 2rem;
+    font-family: Arial, 'Courier New', Courier, monospace;
+
+}
+
+.keypoint {
+    font-style: italic;
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+
+/* padding, margin, border 
+margin-top, margin-right, margin-bottom, margin-left 
+ex. margin: 10px auto 10px auto;
+*/
+/* text-align: center; virtical-align, line-height */
