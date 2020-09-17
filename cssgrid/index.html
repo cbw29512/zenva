@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>CSS Grid</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="">
+        <style>
+
+            #parent { background:
+                rgba (0,0,0,.5); display: grid;
+            grid-template-columns: 1fr 2fr 1fr; 
+            grid-template-rows: 50px 50px}
+            .child1 { background: skyblue; }
+            .child2 { background: powderblue; }
+            .child3 { background: cadetblue; }
+            .child4 { background: indianred; }
+            .child5 { background: salmon; }
+            .child6 { background: firebrick; }
+
+        </style>
+    </head>
+    <body>
+        
+        <div id="parent">
+            <div class="child1">1</div>
+            <div class="child2">2</div>
+            <div class="child3">3</div>
+            <div class="child4">4</div>
+            <div class="child5">5</div>
+            <div class="child6">6</div>
+        </div>
+        <script src="" async defer></script>
+    </body>
+</html>
