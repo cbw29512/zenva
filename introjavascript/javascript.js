@@ -150,3 +150,178 @@
 //     currentHealth += healAmount;
 // }
 
+// var currentHealth = 50
+// var maxHealth = 100
+// function currentHealth(healAmount = 10) {
+//     var newHealth = currentHealth + healAmount;
+//     currentHealth = newHealth > 100 ? maxHealth : newHealth;
+//     return (currentHealth / maxHealth) * 100;
+//     }
+// var result = heal(); //currentHealth = 60, result = 60
+// heal(50); //currentHealth = 100 result = 100
+
+// function calculatePercent (dividen, divisor) {
+//     return (dividen / divisor) * 100;
+// }
+
+// if statements
+
+// if (input) {
+//     code to run if true
+// }
+
+// var keyPressed = "l";
+// var xPos = 0;
+//let endPos = 5;
+
+// if (keyPressed == "r" && xPos <endPos) {
+//     xPos += 1; 
+// }
+
+// if (keyPressed == "r") {
+//     xPos -= 1; // false no change
+// }
+
+// var keyPressed = "l"
+// var xPos = 0;
+// if (keyPressed == "l") {
+//     xPos -= 1;
+// } else if (keyPressed == "r") {
+//     xPos += 1;
+// } else {
+//     xPos = 0;
+// }
+
+//while loop
+
+// let endPos = 5
+// var xPos = 0
+// var enemyPos = 4;
+// var isGameOver = false;
+
+// while (!isGameOver) {
+//     xPos++;
+//     if (xPos >= endPos || xPos == enemyPos) {
+//         isGameOver = true;
+//     }
+// }    
+
+// while(pos < endPos) {
+//     pos ++;
+// }
+
+// Controll Statements 
+// Break, Return, Continue
+
+// while(xPos < endPos) {
+//     if (xPos % 2 == 1) {
+//         xPos += 2;
+//         continue;
+//     }
+//         xPos++;
+//     if (xPos == enemyPos) {
+//         break;
+//     }
+// }
+
+// function movePlayer() {
+//     while(xPos < endPos) {
+//         xPos++;
+//         if (Xpos == enemyPos) {
+//             return;
+//         }
+//     }
+// }
+
+// For loops
+// var items = ["Axe", "Shirt", "Knife"];
+// var finalString = "In my inventory, I have "
+
+// for(var i = 0; i < items.length; i++) {
+//     var itemName = items[i];
+//     finalString += itemName + " ";
+// }
+
+// var items = ["Axe", "Shirt", "Knife"];
+// var finalString = "In my inventory, I have "
+// items.forEach(function(element) {
+//     finalString += element + " ";
+// });
+
+// Objects collection of name : value pairs (similar to dict)
+
+// var gameCharacter = {
+//     name: "Nimish",
+//     xPos: 0, 
+//     items: ["Knife", "Food"],
+//     move: function(x) {
+//         this.xPos += x;
+//     }
+// };
+
+// var name = gameCharacter.name;
+// var name = gameCharacter['name'];
+// gameCharacter.items = ["Axe", "Bread"];
+// gameCharacter.move(5);
+// var x = gameCharacter.xPos; // returns 5
+// gameCharacter.yPos = 0;
+// gameCharacter,move = function(x,y) {
+//     this.xPos += x;
+//     this.yPos += y;
+// };
+
+// var gameCharacter = {
+//     name: "Nimish",
+//     class: "Human",
+//     health: 100,
+//     get title() {
+//         return this.name + "the" + this.class  
+// },
+//     set maxHealth(h) {
+//         this.health = h;
+// },
+//     xPos: 0, 
+//     items: ["Knife", "Food"],
+//     move: function(x) {
+//         this.xPos += x;
+//     }
+// };
+
+//gameCharacter.title; // "Nimish the human"
+//gameCharacter,maxHealth =150; //health = 150;
+// var health = gameCharacter.maxHealth; //undefined
+// var i = 5;
+// var j = i;
+// i = 10; // i =10, j = 5
+// var gc = gameCharacter;
+// gc.name = "new name"; 
+//gameCharacter.name = "new name", gc.name = "new name";
+
+//prototype
+// function gameCharacter(name, xPos, health) {
+//     this.name = name;
+//     this.xPos = xPos;
+//     this.health = health;
+//     this.move = function(x) {
+//         this,xPos += x;
+//     }
+//     this.class = "Human";
+// }
+
+// var gc1 = new gameCharacter("Nimish", 0, 100);
+// var name = gc1.name;
+// gc1,health = 150;
+// gc1.move(10);
+// var gc1 = new gameCharacter("Zenva", 5, 150);
+// gameCharacter.prototype.class = "Human";
+// gc2.class; //Human
+
+// var heal() = function(amount) {
+//     this.health += amount;
+// }
+
+// gameCharacter.prototype.heal = heal;
+// gc1.heal(5);
+// gc2.heal(10);
+
+
