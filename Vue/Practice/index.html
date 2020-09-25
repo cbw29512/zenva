@@ -1,32 +1,77 @@
 <!DOCTYPE html>
-<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
-<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
-<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>Vue Practice</title>
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="">
-        <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js" async defer></script>
-    </head>
-    <body>
-        <!--[if lt IE 7]>
-            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
-        <![endif]-->
-        <div id='firstDiv'>
-            <p>number is: {{ number }}</p>
-        </div>
+<html>
+<head>
+	<title>Vue Practice</title>
+	<script src="https://cdn.jsdelivr.net/npm/vue@2.6.10/dist/vue.js"></script>
+</head>
+<body>
 
-        <script>
-            var firstVue = new Vue({
-                el: '#firstDiv',
-                data: {
-                    number: 1
-                }
-            })
-        </script>
-    </body>
+	<div id='firstDiv'>
+		<input v-model='number'>
+		<p>number is: {{ number }}</p>
+		<ul>
+			<li v-for='number_ in numbers'>
+				{{ number_ }}
+			</li>
+		</ul>
+	</div>
+
+	<div id='secondDiv'>
+		<button v-on:click='openCloseDoor'>Open or close door</button>
+		<p v-if='isDoorOpen'>Come in!</p>
+		<p v-else-if='!isDoorOpen'>Stay out!</p>
+	</div>
+
+	<div id='thirdDiv'>
+		<ul>
+			<grocery-item 
+			v-for='item in groceryItems'
+			v-bind:groceryitem='item'
+			></grocery-item>
+		</ul>
+	</div>
+
+	<script>
+
+		var firstVue = new Vue({
+			el: '#firstDiv',
+			data: {
+				number: 1,
+				numbers: [1, 2, 3],
+			}
+		})
+
+		// firstVue.$watch('number',function(){
+		// 	alert('number has changed')
+		// })
+		// firstVue.number = 10
+
+		var secondVue = new Vue({
+			el: '#secondDiv',
+			data: {
+				isDoorOpen: false
+			},
+			methods: {
+				openCloseDoor: function() {
+					this.isDoorOpen = !this.isDoorOpen
+				}
+			}
+		})
+
+		Vue.component('grocery-item', {
+			props: ['groceryitem'],
+			template: '<li>{{ groceryitem.quantity }} {{ groceryitem.name }}</li>'
+		})
+		var thirdVue = new Vue({
+			el:'#thirdDiv',
+			data: {
+				groceryItems: [
+					{name: 'Bread', quantity: 2},
+					{name: 'Cheese', quantity: 1},
+					{name: 'Apples', quantity: 4},
+				]
+			}
+		})
+	</script>
+</body>
 </html>
