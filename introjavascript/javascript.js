@@ -324,4 +324,25 @@
 // gc1.heal(5);
 // gc2.heal(10);
 
+class gameCharacter {
+    constructor (name, xPos, health) {
+        this.name = name;
+        this.xPos = xPos;
+        this.health = health;
+    }
+    move(x) {
+        this.xPos +=x;
+    }
+}
+var gc1 = gameCharacter('Ninish', 0, 100);
+gc1.move(5);
+gc1.name;
 
+class humanCharacter extends gameCharacter {
+    constructor(name, xPos, health) {
+        super(name, xPos, health)
+        this.classification = "Human"; 
+    }
+}
+
+var hc1 = humanCharacter('Zenca', 5, 150);
