@@ -1,3 +1,20 @@
+# subclasses, superclasses and inheritance
+
+# PlayerCharacter(GameCharacter):
+# super().__init__(name, x_pos, y_pos):
+
+# player_character = PlayerCharacter('P_character', 100, 100, 500, 500)
+# print(player_character.name)
+# player_character.move(100)
+
+# def move(self, by_y_amount):
+#     self.y_pos += by_y_amount
+
+
+# print(player_character.x_pos)  # 500
+# print(player_character.y_pos)  # 600
+
+
 # Classes and Objects
 # Class fields, methods, and constructors
 # Object instatiation
