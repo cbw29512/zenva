@@ -125,7 +125,7 @@ class Game:
             if player_character.detect_collision(treasure):
                 is_game_over = True
                 did_win = True
-                text = font.render('You win! :)', True, BLACK_COLOR)
+                text = font.render('You Win! :-)', True, BLACK_COLOR)
                 self.game_screen.blit(text, (275, 350))
                 pygame.display.update()
                 clock.tick(1)
