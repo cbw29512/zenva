@@ -1,9 +1,3 @@
-# Summary!
-# Installing Python and Pygame
-# Python language basics
-# (variables, collections, control flow, functions, classes)
-# Developing our game while learning about Pygame
-
 # Gain access to the pygame library
 import pygame
 
